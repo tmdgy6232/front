@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="JavaScript">
+        document.write("head 부분에 자바스크립트를 태그 삽입하는 방법");
+    </script>
+
+</head>
+
+<body>
+    <script language="JavaScript">
+        document.write("body 부분에 자바스크립트를 태그 삽입하는 방법");
+        document.write("자바스크립트는")
+        document.writeln("매우")
+        document.write("재미있습니다.")
+    </script>
+    <h2>자바스크립트 문장 기초</h2>
+    <pre> script 태그를 head 안에 삽입하는 이유는 미완성이거나 혹은 미처 해석되지 않은 자바스크립트 코드를 실행시킴으로써 발생하는 문제를
+        미연에 방지하기 위해 삽입하고, body 태그 안에 들어가는 경우도 있는데 같은 이유이다.
+
+        자바스크립트의 코드를 감추기 위해 저장된 파일을 불러와서 삽입하는 경우는 script태그의 src 속성을 사용한다.
+        자바스크립트 파일의 확장자는 js 이어야 한다.
+    </pre>
+    <script src="javascript.js">
+
+    </script>
+</body>
+
+</html>
