@@ -23,6 +23,11 @@
             }
             return s;
         }
+
+        function factorial(num){
+            if(num==0) return 1;
+            else return (num*factorial(num-1));
+        }
     </script>
 </head>
 
@@ -91,6 +96,25 @@
         eval(수식문자열) : 문자열을 숫자로 변환한 후 그 결과값을 리턴한다. 
     </pre>
     
+    <h2>재귀함수</h2>
+    <pre>
+        함수의 재귀적 호출(Recursive Call)은 함수 안에서 자기 자신의 함수를 다시 호출하는 방법이다. 재귀적 함수 호출의 가장 일반적인 예는 계승(factorial)
+        함수를 계산하는 것을 생각할 수 있다. 계승함수는 n!=n*(n-1)로 자바스크립트로 표현함면 다음과 같은 형식이 된다. 
+
+        function factorial(num){
+            if(num==0) return 1;
+            else return (num*factorial(num-1));
+        }
+    </pre>
+    
+    <h2>재귀함수 호출</h2>
+    <script language="JavaScript">
+        var N,S;
+        N=prompt("어떤 수를 입력하시겠습니까?",0);
+        S= factorial(N);
+        document.write(N + "! = " + S);
+
+    </script>
 </body>
 
 </html>
