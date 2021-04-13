@@ -117,6 +117,40 @@
         document.write("문자열의 내용 : " + a);
         document.write("문자열의 길이 : " + a.length);
     </script>
+
+    <h2> String 객체의 각종 메소드</h2>
+    <pre>
+        anchor(문장) : 문장 위치로 페이지 이동
+        big() : 기본 폰트보다 조금 더 큰 글자
+        blink() : 깜빡이는 글자
+        charAt(Index) : index 위치의 글자 확인
+        bold() : 굵은 글씨체
+        fixed() : 타자기체의 글자
+        fontcolor(색) : 글자색 설정
+        fonrsize(size) : 글자 크기 설정
+        indexOf(문자열) : 문장 중에서 문자열의 인덱스 위치 검색
+        italics() : 이탤릭체의 글자
+        lastIndexOf(문자열) : 문장 중에서 문자열의 마지막 인덱스 위치 검색
+        link(url) : 다른 위치나 사이트로 이동
+        small() : 기본 폰트보다 조금 작은 글자
+        strike() : 가운도 줄 그은 글자체
+        split(대상, 기준문자) : 대상문자열ㅇㄹ 기존문자로 분리
+        sub() : 아래첨자로 표현
+        substring(index1, index2) : 1에서 2사이의 문자열을 문장중에서 검색
+        sup() : 윗첨자로 표현
+        toLowerCase() : 소문자로 변경
+        toUpperCase() : 대문자로 변경
+
+        <h2>String 메소드 예제 </h2>
+    </pre>
+    <script language="JavaScript">
+        document.writeln("이탤릭체 : " + "Javascript".italics());
+        document.writeln("글씨크기3 : " + "Javascript".fontsize(3));
+        document.writeln("굵은글씨 : " + "Javascript".bold());
+        document.writeln("가운데줄긋기 : " + "Javascript".strike());
+        document.writeln("글자색 : " + "Javascript".fontcolor("blue"));
+        document.writeln("깜빡이는 글자 : " + "Javascript".blink());
+    </script>
 </body>
 
 </html>
