@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script language="JavaScript">
-        function Display(){
-            document.write("이름 : " + this.name + " 전공 : " + this.major );
-            document.write("학번 : " + this.hakbun + " 나이 : " + this.age );
+        function Display() {
+            document.write("이름 : " + this.name + " 전공 : " + this.major);
+            document.write("학번 : " + this.hakbun + " 나이 : " + this.age);
         }
 
-        function Pinfo(pname, pmajor, phakbun, page){
+        function Pinfo(pname, pmajor, phakbun, page) {
             this.name = pname;
             this.major = pmajor;
             this.hakbun = phakbun;
@@ -19,17 +19,17 @@
             this.print = Display;
         }
 
-        function cal_slength(){
+        function cal_slength() {
             console.log('init');
-            var tempStr, temp=0, onechar, tcount=0;
+            var tempStr, temp = 0, onechar, tcount = 0;
 
             tempStr = new String(document.smsform.content.value);
             temp = tempStr.length;
 
-            for(var k=0; k<temp; k++){
+            for (var k = 0; k < temp; k++) {
                 onechar = tempStr.charAt(k);//  1바이트 추출
-                if(escape(onechar) == '%u'){} // 한글확인
-                else if(escape(onechar).length > 4) { tcount += 2;}
+                if (escape(onechar) == '%u') { } // 한글확인
+                else if (escape(onechar).length > 4) { tcount += 2; }
                 else tcount++;
             }
 
@@ -76,11 +76,11 @@
 
     </pre>
     <h2>사용자정의함수 예제 </h2>
-    <script language = "JavaScript">
-        p1 = new Pinfo("승효","개발","12121","29");
-        p2 = new Pinfo("은혜","몰라","12121","29");
-        p3 = new Pinfo("혜수","댄스","12121","29");
-        
+    <script language="JavaScript">
+        p1 = new Pinfo("승효", "개발", "12121", "29");
+        p2 = new Pinfo("은혜", "몰라", "12121", "29");
+        p3 = new Pinfo("혜수", "댄스", "12121", "29");
+
         p1.print();
         p2.print();
         p3.print();
@@ -99,11 +99,11 @@
         만약 객체내에 속성이 3개이면 속성의 갯수만큼 반복
     </pre>
 
-    <script language = "JavaScript">
+    <script language="JavaScript">
         p4 = new Pinfo("승효", "개발자", "212", "29");
 
-        for(var k in p4){
-            document.write( k + " : " + p4[k]);
+        for (var k in p4) {
+            document.write(k + " : " + p4[k]);
         }
     </script>
 
@@ -178,8 +178,8 @@
     </pre>
     <form name="smsform" method="post" action="sms.php">
         사랑하는 분의 성명은 ? <input name="content" onkeyup="cal_slength();" />
-        문자길이 : <input name="msgleng" type="text" size="2" maxlength="2" readonly value="0"/>
-        문자 인코딩 : <input name="msgenc" type="text" size="40" readonly/>
+        문자길이 : <input name="msgleng" type="text" size="2" maxlength="2" readonly value="0" />
+        문자 인코딩 : <input name="msgenc" type="text" size="40" readonly />
     </form>
 
     <h2>Math 객체</h2>
@@ -228,8 +228,19 @@
         document.write("오일러 상수 : " + Math.E + "<br/>");
         document.write("2의 자연로그 : " + Math.LN2 + "<br/>");
         document.write("10의 자연로그 : " + Math.LN10 + "<br/>");
-        document.write("오일러 상수 : " + Math.E + "<br/>");
-        document.write("오일러 상수 : " + Math.E + "<br/>");
+        document.write("파이 : " + Math.PI + "<br/>");
+        document.write("2의 제곱근 : " + Math.SQRT2 + "<br/>");
+        document.write("1/2의 제곱근 : " + Math.SQRT1_2 + "<br/>");
+
+        document.write("method <br/>")
+        document.write("sin(30) : " + Math.sin(30) + "<br/>");
+        with (Math) {
+            document.write("cos(30) : " + cos(30) + "<br/>");
+            document.write("tan(30) : " + tan(30) + "<br/>");
+            document.write("asin(0.5) : " + asin(0.5) + "<br/>");
+            document.write("acos(30) : " + acos(0.5) + "<br/>");
+            document.write("atan(30) : " + atan(0.5) + "<br/>");
+        }
 
     </script>
 </body>
