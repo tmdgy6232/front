@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script language="JavaScript">
+        function currenttime() {
+            var now = new Date();
+            var hour = now.getHours();
+            var minute = now.getMinutes();
+            var seconds = now.getSeconds();
+            now = null;
+
+            if (hour >= 12) { ampm = "PM"; hour = hour - 12; }
+            else { ampm = "AM" } // 오전오후
+            hour = (hour == 0) ? 12 : hour;
+
+            if (minute < 10) minute = "0" + minute;
+            if (seconds < 10) seconds = "0" + seconds;
+
+            return hour + ":" + minute + ":" + seconds + ampm;
+        }
+
+        function Calendar(year, month) {
+            var days = new Array(31, 28, 31, 30, 31, 31, 30, 31, 30, 31, 30, 31);
+            var week = new Array("일", "월", "화", "수", "목", "금", "토");
+
+            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) days[1] = 29; // 윤년
+
+            firstDay = new Date(year, month - 1, 1);
+            startDay = firstDay.getDay(); //   1일의 요일 산출
+            document.write("<table border=1 align=center background='#99ff33'> ");
+            document.write("<th colspan=7><font color='66666cc' size=5>");
+            document.write(year + "년 " + (month + 1) + "월</font></th>");
+            document.write("</table>")
+        }
+        Calendar(2021, 4);
+    </script>
+
+</body>
+
+</html>
